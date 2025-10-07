@@ -88,7 +88,7 @@ body {
 }
 
 .logo-centro img {
-  height: 70px;
+  height: 90px;
   margin-bottom: 5px;
 }
 
@@ -300,17 +300,78 @@ footer img {
 
 /* Header y productos responsivos en móvil */
 @media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  h2,
+  .formulario-reclamo h2,
+  .reclamo-texto h2 {
+    font-size: 16px;
+  }
+  h3,
+  .productos h3,
+  .contenido-principal h3 {
+    font-size: 14px;
+  }
+  h4,
+  .productos h4,
+  .contenido-principal h4 {
+    font-size: 13px;
+  }
+  .subtitulo,
+  .reclamo-texto p {
+    font-size: 13px;
+  }
+  .precio {
+    font-size: 14px;
+  }
+  .banner a {
+    font-size: 14px;
+  }
+  .marca {
+    font-size: 15px;
+  }
+  .reclamo-icono {
+    font-size: 28px;
+  }
+  .formulario-reclamo label {
+    font-size: 13px;
+  }
+  .formulario-reclamo input,
+  .formulario-reclamo select,
+  .formulario-reclamo textarea {
+    font-size: 13px;
+  }
+  .boton-reclamo,
+  .formulario-reclamo button {
+    font-size: 13px;
+  }
+  footer {
+    font-size: 11px;
+  }
   .producto {
     width: 100%;
   }
-
+  .productos,
+  .contenido-principal,
+  .productos ol,
+  .productos ul,
+  .productos li,
+  .contenido-principal p,
+  .contenido-principal li,
+  .productos p,
+  .productos li {
+    font-size: 13px;
+  }
   .banner {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
     padding: 10px 0;
   }
-
   .banner .nav-left,
   .banner .nav-right {
     flex-direction: row;
@@ -320,23 +381,22 @@ footer img {
     padding: 0;
     margin-bottom: 10px;
   }
-
   .logo-centro {
     margin: 10px 0;
   }
-
   .logo-centro img {
     height: 60px;
     margin-bottom: 5px;
   }
-
   .marca {
-    font-size: 20px;
+    font-size: 18px;
   }
-
   .formulario-reclamo,
   .reclamo-contenido {
     padding: 20px;
+  }
+  .portada h1{
+    font-size: 30px;
   }
 }
 
