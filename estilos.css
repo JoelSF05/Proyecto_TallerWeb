@@ -1,0 +1,358 @@
+:root {
+  --fondo: #fff7f0;
+  --texto: #6b3e3e;
+  --barra: #a86c6c;
+  --hover: #f3cfc2;
+  --blanco: #fff;
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-size: 18px;
+  animation: fadeIn 1s ease-in;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Contenedor general */
+.contenedor {
+  width: 100%;
+}
+
+/* Banner/Header principal */
+.banner {
+  width: 100vw;
+  background-color: var(--barra);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 6px var(--sombra);
+  flex-wrap: wrap;
+  position: relative;
+  margin-left: calc(-50vw + 50%);
+}
+
+.logo-centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+}
+
+.banner .nav-left,
+.banner .nav-right {
+  flex: 1;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.banner .nav-left {
+  justify-content: flex-start;
+  padding-left: 40px;
+}
+
+.banner .nav-right {
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+
+.banner a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.banner a:hover {
+  color: var(--hover);
+  transform: scale(1.1);
+}
+
+.logo-centro img {
+  height: 70px;
+  margin-bottom: 5px;
+}
+
+.marca {
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--blanco);
+}
+
+/* Portada principal */
+.portada {
+  text-align: center;
+  padding: 40px 0 0 0;
+  background-color: var(--fondo);
+  border-bottom: 2px solid var(--hover);
+}
+
+.portada-img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.portada h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 22px;
+  color: #8c5a5a;
+}
+
+/* Productos */
+.productos {
+  background-color: #fff2ea;
+  border-radius: 12px;
+  padding: 60px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.producto {
+  background-color: var(--blanco);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px var(--sombra);
+  padding: 24px;
+  width: calc(33.333% - 40px);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.producto h2 {
+  font-size: 24px;
+  margin-top: 10px;
+  color: var(--texto);
+}
+
+.precio {
+  font-size: 20px;
+  color: var(--barra);
+  font-weight: bold;
+}
+
+/* Libro de Reclamaciones visual */
+.reclamo-contenido {
+  max-width: 700px;
+  margin: 60px auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.reclamo-icono {
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: var(--barra);
+}
+
+.reclamo-texto h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: var(--texto);
+}
+
+.reclamo-texto p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #8c5a5a;
+}
+
+.boton-reclamo {
+  background-color: var(--barra);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-reclamo:hover {
+  background-color: #d48f8f;
+  transform: scale(1.05);
+}
+
+/* Formulario de Reclamo */
+.formulario-reclamo {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: var(--fondo);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--sombra);
+}
+
+.formulario-reclamo h2 {
+  text-align: center;
+  font-size: 28px;
+  color: var(--texto);
+  margin-bottom: 30px;
+}
+
+.formulario-reclamo label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+.formulario-reclamo input,
+.formulario-reclamo select,
+.formulario-reclamo textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: var(--blanco);
+  color: var(--texto);
+}
+
+.formulario-reclamo textarea {
+  resize: vertical;
+}
+
+.formulario-reclamo button {
+  background-color: var(--barra);
+  color: var(--blanco);
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.formulario-reclamo button:hover {
+  background-color: #d48f8f;
+  transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+  background-color: var(--barra);
+  color: var(--blanco);
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+footer img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .producto {
+    width: calc(50% - 40px);
+  }
+}
+
+/* Header y productos responsivos en móvil */
+@media (max-width: 600px) {
+  .producto {
+    width: 100%;
+  }
+
+  .banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 0;
+  }
+
+  .banner .nav-left,
+  .banner .nav-right {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .logo-centro {
+    margin: 10px 0;
+  }
+
+  .logo-centro img {
+    height: 60px;
+    margin-bottom: 5px;
+  }
+
+  .marca {
+    font-size: 20px;
+  }
+
+  .formulario-reclamo,
+  .reclamo-contenido {
+    padding: 20px;
+  }
+}
+
+/* Sticky footer: asegura que el footer quede abajo si hay poco contenido */
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

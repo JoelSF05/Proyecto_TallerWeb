@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Libro de Reclamaciones | Flor de Vainilla</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <section class="formulario-reclamo">
+    <h2>Libro de Reclamaciones</h2>
+    <p class="mensaje">Tu opinión es muy especial. Déjanos tu reclamo y lo atenderemos con gusto.</p>
+
+    <form id="formulario-reclamo">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required />
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required />
+
+      <label for="motivo">Motivo del reclamo</label>
+      <textarea id="motivo" name="motivo" rows="4" placeholder="Describe tu reclamo aquí..." required></textarea>
+
+      <label for="tipo">Tipo de reclamo</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Selecciona una opción</option>
+        <option value="producto">Producto</option>
+        <option value="servicio">Servicio</option>
+        <option value="entrega">Entrega</option>
+      </select>
+
+      <button type="submit">Enviar Reclamo</button>
+    </form>
+
+    <div style="text-align:center; margin-top: 30px;">
+      <a href="inicio.html" class="boton-reclamo">Volver a la página principal</a>
+    </div>
+  </section>
+</body>
+</html>
