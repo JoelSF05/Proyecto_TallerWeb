@@ -1,81 +1,83 @@
-:root {
-  --fondo: #fff7f0;
-  --texto: #6b3e3e;
-  --barra: #a86c6c;
-  --hover: #f3cfc2;
-  --blanco: #fff;
-  --sombra: rgba(0, 0, 0, 0.1);
-}
-
+/* Base y estructura */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: "Segoe UI", sans-serif;
-  background-color: var(--fondo);
-  color: var(--texto);
+  background-color: #fff7f0;
+  color: #6b3e3e;
   font-size: 18px;
   animation: fadeIn 1s ease-in;
-  width: 100vw;
-  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Contenedor general */
 .contenedor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
-/* Banner/Header principal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Header */
 .banner {
-  width: 100vw;
-  background-color: var(--barra);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 20px 0;
-  box-shadow: 0 2px 6px var(--sombra);
-  flex-wrap: wrap;
-  position: relative;
-  margin-left: calc(-50vw + 50%);
+  background-color: #a86c6c;
+  padding: 8px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo-centro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  text-align: center;
-}
-
-.banner .nav-left,
-.banner .nav-right {
-  flex: 1;
+.nav-left,
+.nav-right {
   display: flex;
   gap: 30px;
   align-items: center;
 }
 
-.banner .nav-left {
+.nav-left {
   justify-content: flex-start;
-  padding-left: 40px;
 }
 
-.banner .nav-right {
+.nav-right {
   justify-content: flex-end;
-  padding-right: 40px;
+}
+
+.logo-centro {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.logo-centro img {
+  height: 80px;
+  margin-bottom: 5px;
 }
 
 .banner a {
-  color: var(--blanco);
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
@@ -83,28 +85,16 @@ body {
 }
 
 .banner a:hover {
-  color: var(--hover);
+  color: #f3cfc2;
   transform: scale(1.1);
 }
 
-.logo-centro img {
-  height: 90px;
-  margin-bottom: 5px;
-}
-
-.marca {
-  display: block;
-  font-size: 22px;
-  font-weight: bold;
-  color: var(--blanco);
-}
-
-/* Portada principal */
+/* Portada */
 .portada {
   text-align: center;
   padding: 40px 0 0 0;
-  background-color: var(--fondo);
-  border-bottom: 2px solid var(--hover);
+  background-color: #fff7f0;
+  border-bottom: 2px solid #f3cfc2;
 }
 
 .portada-img {
@@ -127,6 +117,40 @@ body {
   color: #8c5a5a;
 }
 
+/* Preguntas */
+.preguntas {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+}
+
+.preguntas h3{
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.preguntas p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Sobre Nosotros */
+.sobre_nosotros {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+  padding: 60px 40px;
+}
+
+.sobre_nosotros p {
+  font-size: 18px;
+  color: #6b3e3e;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
 /* Productos */
 .productos {
   background-color: #fff2ea;
@@ -139,9 +163,9 @@ body {
 }
 
 .producto {
-  background-color: var(--blanco);
+  background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 6px var(--sombra);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 24px;
   width: calc(33.333% - 40px);
   text-align: center;
@@ -162,36 +186,47 @@ body {
 .producto h2 {
   font-size: 24px;
   margin-top: 10px;
-  color: var(--texto);
+  color: #6b3e3e;
 }
 
 .precio {
   font-size: 20px;
-  color: var(--barra);
+  color: #a86c6c;
   font-weight: bold;
 }
 
-/* Libro de Reclamaciones visual */
+/* Libro de Reclamaciones */
+.boton-reclamo {
+  display: inline-block;
+  background-color: #a86c6c;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
 .reclamo-contenido {
   max-width: 700px;
   margin: 60px auto;
   background-color: #fff;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .reclamo-icono {
   font-size: 42px;
   margin-bottom: 10px;
-  color: var(--barra);
+  color: #a86c6c;
 }
 
 .reclamo-texto h2 {
   font-size: 28px;
   margin-bottom: 10px;
-  color: var(--texto);
+  color: #6b3e3e;
 }
 
 .reclamo-texto p {
@@ -200,37 +235,20 @@ body {
   color: #8c5a5a;
 }
 
-.boton-reclamo {
-  background-color: var(--barra);
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 16px;
-  display: inline-block;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.boton-reclamo:hover {
-  background-color: #d48f8f;
-  transform: scale(1.05);
-}
-
 /* Formulario de Reclamo */
 .formulario-reclamo {
   max-width: 600px;
   margin: 60px auto;
   padding: 40px;
-  background-color: var(--fondo);
+  background-color: #fff7f0;
   border-radius: 12px;
-  box-shadow: 0 2px 8px var(--sombra);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .formulario-reclamo h2 {
   text-align: center;
   font-size: 28px;
-  color: var(--texto);
+  color: #6b3e3e;
   margin-bottom: 30px;
 }
 
@@ -238,7 +256,7 @@ body {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-  color: var(--texto);
+  color: #6b3e3e;
 }
 
 .formulario-reclamo input,
@@ -251,8 +269,8 @@ body {
   border-radius: 8px;
   font-size: 16px;
   font-family: inherit;
-  background-color: var(--blanco);
-  color: var(--texto);
+  background-color: #fff;
+  color: #6b3e3e;
 }
 
 .formulario-reclamo textarea {
@@ -260,8 +278,8 @@ body {
 }
 
 .formulario-reclamo button {
-  background-color: var(--barra);
-  color: var(--blanco);
+  background-color: #a86c6c;
+  color: #fff;
   padding: 14px 28px;
   border: none;
   border-radius: 8px;
@@ -276,11 +294,10 @@ body {
   transform: scale(1.03);
 }
 
-/* Footer */
-
+/*  Footer */
 footer {
-  background-color: #a86c6c; /* mismo color que el encabezado */
-  color: #fff; /* texto blanco */
+  background-color: #a86c6c;
+  color: #fff;
   text-align: center;
   padding: 30px 20px;
 }
@@ -305,11 +322,114 @@ footer a:hover {
   text-decoration: underline;
 }
 
-
 /* Responsive */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .producto {
+    width: calc(50% - 40px);
+  }
+}
+
 @media (max-width: 600px) {
+  /* Tipografía base */
+  body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  h2,
+  .formulario-reclamo h2,
+  .reclamo-texto h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  h3,
+  .productos h3,
+  .contenido-principal h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  h4,
+  .productos h4,
+  .contenido-principal h4 {
+    font-size: 13px;
+  }
+
+  .subtitulo,
+  .reclamo-texto p,
+  .productos p,
+  .contenido-principal p,
+  .contenido-principal li,
+  .productos li,
+  .sobre_nosotros p,
+  .preguntas p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .precio {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .banner a {
+    font-size: 14px;
+  }
+
+  .reclamo-icono {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .formulario-reclamo label,
+  .formulario-reclamo input,
+  .formulario-reclamo select,
+  .formulario-reclamo textarea,
+  .formulario-reclamo button {
+    font-size: 13px;
+  }
+
+  /* Header móvil */
+  .banner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+    padding: 6px 0;
+    gap: 6px;
+  }
+
+  .banner .nav-left,
+  .banner .nav-right {
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .logo-centro img {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  /* Productos */
+  .producto {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Footer */
   footer {
     padding: 40px 15px;
+    font-size: 11px;
   }
 
   footer h2 {
@@ -322,134 +442,34 @@ footer a:hover {
   }
 
   .footer-logo {
-    height: 60px;
+    height: 50px;
+    margin-bottom: 15px;
   }
-}
 
-
-
-/* Responsivo */
-@media (max-width: 1024px) {
-  .producto {
-    width: calc(50% - 40px);
-  }
-}
-
-/* Header y productos responsivos en móvil */
-@media (max-width: 600px) {
-  body {
-    font-size: 15px;
-  }
-  h1 {
-    font-size: 22px;
-  }
-  h2,
-  .formulario-reclamo h2,
-  .reclamo-texto h2 {
-    font-size: 16px;
-  }
-  h3,
-  .productos h3,
-  .contenido-principal h3 {
-    font-size: 14px;
-  }
-  h4,
-  .productos h4,
-  .contenido-principal h4 {
-    font-size: 13px;
-  }
-  .subtitulo,
-  .reclamo-texto p {
-    font-size: 13px;
-  }
-  .precio {
-    font-size: 14px;
-  }
-  .banner a {
-    font-size: 14px;
-  }
-  .marca {
-    font-size: 15px;
-  }
-  .reclamo-icono {
-    font-size: 28px;
-  }
-  .formulario-reclamo label {
-    font-size: 13px;
-  }
-  .formulario-reclamo input,
-  .formulario-reclamo select,
-  .formulario-reclamo textarea {
-    font-size: 13px;
-  }
-  .boton-reclamo,
-  .formulario-reclamo button {
-    font-size: 13px;
-  }
-  footer {
-    font-size: 11px;
-  }
-  .producto {
-    width: 100%;
-  }
-  .productos,
-  .contenido-principal,
-  .productos ol,
-  .productos ul,
-  .productos li,
-  .contenido-principal p,
-  .contenido-principal li,
-  .productos p,
-  .productos li {
-    font-size: 13px;
-  }
-  .banner {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding: 10px 0;
-  }
-  .banner .nav-left,
-  .banner .nav-right {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    padding: 0;
-    margin-bottom: 10px;
-  }
-  .logo-centro {
-    margin: 10px 0;
-  }
-  .logo-centro img {
-    height: 60px;
-    margin-bottom: 5px;
-  }
-  .marca {
-    font-size: 18px;
-  }
+  /* Formularios */
   .formulario-reclamo,
   .reclamo-contenido {
     padding: 20px;
   }
-  .portada h1{
+
+  /* Portada */
+  .portada h1 {
     font-size: 30px;
+    margin-bottom: 10px;
   }
-}
 
-/* Sticky footer: asegura que el footer quede abajo si hay poco contenido */
-html, body {
-  height: 100%;
-}
+  .portada {
+    padding: 30px 15px 0 15px;
+  }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+  /* Preguntas frecuentes */
+  .preguntas {
+    padding: 30px 20px;
+    gap: 20px;
+  }
 
-.contenedor {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  .preguntas h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
 }
