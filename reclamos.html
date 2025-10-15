@@ -1,40 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Libro de Reclamaciones | Flor de Vainilla</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
+
 <body>
-  <section class="formulario-reclamo">
-    <h2>Libro de Reclamaciones</h2>
-    <p class="mensaje">Tu opinión es muy especial. Déjanos tu reclamo y lo atenderemos con gusto.</p>
+  <div class="contenedor">
 
-    <form id="formulario-reclamo">
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required />
+    <!-- Encabezado -->
+    <header class="banner">
+      <nav class="nav-left">
+        <a href="inicio.html">Inicio</a>
+      </nav>
+      <div class="logo-centro">
+        <img src="imágenes/logo.png" alt="Logo Flor de Vainilla" />
+      </div>
+      <nav class="nav-right">
+        <a href="sobre_nosotros.html">Sobre Nosotros</a>
+        <a href="preguntas.html">Preguntas Frecuentes</a>
+      </nav>
+    </header>
 
-      <label for="correo">Correo electrónico</label>
-      <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required />
+    <!-- Formulario de Reclamaciones -->
+    <section class="formulario-reclamo">
+      <h2>Libro de Reclamaciones</h2>
+      <p class="mensaje">Tu opinión es muy especial. Déjanos tu reclamo y lo atenderemos con gusto.</p>
 
-      <label for="motivo">Motivo del reclamo</label>
-      <textarea id="motivo" name="motivo" rows="4" placeholder="Describe tu reclamo aquí..." required></textarea>
+      <form id="formulario-reclamo">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required />
 
-      <label for="tipo">Tipo de reclamo</label>
-      <select id="tipo" name="tipo" required>
-        <option value="">Selecciona una opción</option>
-        <option value="producto">Producto</option>
-        <option value="servicio">Servicio</option>
-        <option value="entrega">Entrega</option>
-      </select>
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required />
 
-      <button type="submit">Enviar Reclamo</button>
-    </form>
+        <label for="motivo">Motivo del reclamo</label>
+        <textarea id="motivo" name="motivo" rows="4" placeholder="Describe tu reclamo aquí..." required></textarea>
 
-    <div style="text-align:center; margin-top: 30px;">
-      <a href="inicio.html" class="boton-reclamo">Volver a la página principal</a>
-    </div>
-  </section>
+        <label for="tipo">Tipo de reclamo</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Selecciona una opción</option>
+          <option value="producto">Producto</option>
+          <option value="servicio">Servicio</option>
+          <option value="entrega">Entrega</option>
+        </select>
+
+        <button type="submit">Enviar Reclamo</button>
+      </form>
+
+      <div style="text-align:center; margin-top: 30px;">
+        <a href="inicio.html" class="boton-reclamo">Volver a la página principal</a>
+      </div>
+    </section>
+
+    <!-- Footer con información de contacto -->
+    <footer>
+      <img src="imágenes/logo.png" alt="Logo Flor de Vainilla" style="height: 50px; margin-bottom: 15px;" />
+      <p>📍 Jr. Los Pinos 245 - Lima, Perú</p>
+      <p>📞 Teléfono: (01) 456-7890</p>
+      <p>✉️ Correo: contacto@flordeVainilla.com</p>
+      <p>🕒 Horario: Lunes a Viernes 8:00 a.m. - 8:00 p.m. / Sábados 9:00 a.m. - 5:00 p.m.</p>
+      <br>
+      <p>© 2025 Flor de Vainilla. Todos los derechos reservados.</p>
+    </footer>
+
+  </div>
 </body>
+
 </html>
