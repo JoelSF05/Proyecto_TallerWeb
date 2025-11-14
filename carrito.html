@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito de Compras - Flor de Vainilla</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <!-- Encabezado -->
+        <header class="banner">
+            <nav class="nav-left">
+                <a href="inicio.html">Inicio</a>
+                <a href="carrito.html">Carrito de Compras</a>
+            </nav>
+
+            <div class="logo-centro">
+                <img src="imágenes/logo.png" alt="Logo Flor de Vainilla" />
+            </div>
+
+            <nav class="nav-right">
+                <a href="sobre_nosotros.html">Sobre Nosotros</a>
+                <a href="preguntas.html">Preguntas Frecuentes</a>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+            <!-- Menú móvil dentro del header -->
+            <nav class="menu-movil" aria-hidden="true">
+                <a href="inicio.html">Inicio</a>
+                <a href="carrito.html">Carrito de Compras</a>
+                <a href="sobre_nosotros.html">Sobre Nosotros</a>
+                <a href="preguntas.html">Preguntas Frecuentes</a>
+            </nav>
+        </header>
+
+        <main class="carrito">
+            <h1>Carrito de Compras</h1>
+            <div class="productos-lista">
+                <!-- Productos existentes -->
+                <div class="productoCarrito" data-nombre="Torta de Chocolate" data-precio="45">
+                    <img src="imágenes/torta_chocolate.jpg" alt="Torta de Chocolate">
+                    <h2>Torta de Chocolate</h2>
+                    <p>Precio: S/ 45.00</p>
+                    <button class="agregar">Agregar al carrito</button>
+                </div>
+
+                <div class="productoCarrito" data-nombre="Cupcake Vainilla" data-precio="8">
+                    <img src="imágenes/cupcake_vainilla.jpg" alt="Cupcake Vainilla">
+                    <h2>Cupcake Vainilla</h2>
+                    <p>Precio: S/ 8.00</p>
+                    <button class="agregar">Agregar al carrito</button>
+                </div>
+
+                <div class="productoCarrito" data-nombre="Cheesecake" data-precio="30">
+                    <img src="imágenes/cheesecake.jpg" alt="Cheesecake">
+                    <h2>Cheesecake</h2>
+                    <p>Precio: S/ 30.00</p>
+                    <button class="agregar">Agregar al carrito</button>
+                </div>
+
+                <!-- 🔹 Nuevos productos -->
+                <div class="productoCarrito" data-nombre="Brownie" data-precio="12">
+                    <img src="imágenes/brownie.jpg" alt="Brownie">
+                    <h2>Brownie</h2>
+                    <p>Precio: S/ 12.00</p>
+                    <button class="agregar">Agregar al carrito</button>
+                </div>
+
+                <div class="productoCarrito" data-nombre="Macarons" data-precio="20">
+                    <img src="imágenes/macarons.jpg" alt="Macarons">
+                    <h2>Macarons</h2>
+                    <p>Precio: S/ 20.00</p>
+                    <button class="agregar">Agregar al carrito</button>
+                </div>
+
+                <div class="productoCarrito" data-nombre="Pie de Limón" data-precio="28">
+                    <img src="imágenes/pie_limon.jpg" alt="Pie de Limón">
+                    <h2>Pie de Limón</h2>
+                    <p>Precio: S/ 28.00</p>
+                    <button class="agregar">Agregar al carrito</button>
+                </div>
+            </div>
+
+
+            <!-- Carrito dinámico -->
+            <div class="carrito-items">
+                <h2>Productos en tu carrito</h2>
+                <ul id="lista-carrito"></ul>
+                <div class="carrito-total">
+                    <h3>Total: S/ <span id="total">0</span></h3>
+                    <button id="checkout">Finalizar Compra</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer con información de contacto -->
+        <footer>
+            <img src="imágenes/logo.png" alt="Logo Flor de Vainilla" class="footer-logo" />
+            <p>📍 Jr. Los Pinos 245 - Lima, Perú</p>
+            <p>📞 Teléfono: (01) 456-7890</p>
+            <p>✉️ Correo: contacto@flordeVainilla.com</p>
+            <p>🕒 Horario: Lunes a Viernes 8:00 a.m. - 8:00 p.m. / Sábados 9:00 a.m. - 5:00 p.m.</p>
+            <br>
+            <p>© 2025 Flor de Vainilla. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

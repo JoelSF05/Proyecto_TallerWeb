@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Preguntas Frecuentes</title>
   <link rel="stylesheet" href="estilos.css" />
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -15,15 +16,34 @@
     <header class="banner">
       <nav class="nav-left">
         <a href="inicio.html">Inicio</a>
+        <a href="carrito.html">Carrito de Compras</a>
       </nav>
+
       <div class="logo-centro">
         <img src="imágenes/logo.png" alt="Logo Flor de Vainilla" />
       </div>
+
       <nav class="nav-right">
         <a href="sobre_nosotros.html">Sobre Nosotros</a>
         <a href="preguntas.html">Preguntas Frecuentes</a>
       </nav>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+      <!-- Menú móvil dentro del header -->
+      <nav class="menu-movil" aria-hidden="true">
+        <a href="inicio.html">Inicio</a>
+        <a href="carrito.html">Carrito de Compras</a>
+        <a href="sobre_nosotros.html">Sobre Nosotros</a>
+        <a href="preguntas.html">Preguntas Frecuentes</a>
+      </nav>
     </header>
+
+    <nav class="menu-movil" aria-hidden="true">
+      <a href="inicio.html">Inicio</a>
+      <a href="sobre_nosotros.html">Sobre Nosotros</a>
+      <a href="preguntas.html">Preguntas Frecuentes</a>
+    </nav>
 
     <!-- Título principal -->
     <section class="portada">
@@ -33,28 +53,107 @@
 
     <!-- Preguntas -->
     <section class="preguntas">
-      <ol>
-        <li>
-          <h3>¿Cuáles son los horarios de atención?</h3>
-          <p>Nuestro horario de atención es de lunes a viernes de 8:00 a.m. a 8:00 p.m. y sábados de 9:00 a.m. a 5:00 p.m.</p>
-        </li>
-        <li>
-          <h3>¿Ofrecen opciones para personas con alergias alimentarias?</h3>
-          <p>Sí, contamos con opciones sin gluten, sin nueces y otros productos para personas con alergias alimentarias. Por favor, infórmanos al hacer tu pedido.</p>
-        </li>
-        <li>
-          <h3>¿Hacen pedidos personalizados?</h3>
-          <p>Sí, ofrecemos la opción de personalizar pasteles y otros productos según tus preferencias. Contáctanos con anticipación para discutir los detalles.</p>
-        </li>
-        <li>
-          <h3>¿Tienen servicio de entrega a domicilio?</h3>
-          <p>Sí, ofrecemos servicio de entrega a domicilio en un radio de 10 km desde nuestra tienda. Consulta las tarifas y tiempos de entrega al hacer tu pedido.</p>
-        </li>
-        <li>
-          <h3>¿Aceptan tarjetas de crédito o débito?</h3>
-          <p>Sí, aceptamos todas las principales tarjetas de crédito y débito, así como pagos en efectivo.</p>
-        </li>
-      </ol>
+      <div class="cuadro">
+        <button class="pregunta" aria-expanded="false">
+          <span class="texto">¿Cuál es el horario de atención?</span>
+          <span class="flecha">▼</span>
+        </button>
+        <div class="respuesta">
+          <p>Atendemos de lunes a viernes de 8:00 a.m. a 8:00 p.m., y los sábados de 9:00 a.m. a 5:00 p.m. Durante estos
+            horarios puedes visitarnos en tienda, hacer pedidos personalizados o realizar consultas. Si necesitas
+            atención fuera de ese rango, contáctanos con anticipación y evaluaremos tu solicitud según disponibilidad.
+          </p>
+        </div>
+      </div>
+
+      <div class="cuadro">
+        <button class="pregunta" aria-expanded="false">
+          <span class="texto">¿Tienen opciones para personas con alergias alimentarias?</span>
+          <span class="flecha">▼</span>
+        </button>
+        <div class="respuesta">
+          <p>Sí. En Flor de Vainilla nos preocupamos por la salud y bienestar de nuestros clientes. Contamos con
+            productos sin gluten, sin nueces, sin lactosa y otras alternativas para personas con alergias o
+            intolerancias. Al hacer tu pedido, indícanos tus restricciones y adaptaremos la receta para garantizar
+            seguridad y sabor sin compromisos.</p>
+        </div>
+      </div>
+
+      <div class="cuadro">
+        <button class="pregunta" aria-expanded="false">
+          <span class="texto">¿Puedo hacer un pedido personalizado?</span>
+          <span class="flecha">▼</span>
+        </button>
+        <div class="respuesta">
+          <p>Claro que sí. Personalizamos pasteles, cupcakes, galletas y otros productos según tus preferencias de
+            sabor, decoración, temática y ocasión. Puedes enviarnos referencias visuales, paletas de colores o ideas
+            específicas. Recomendamos hacer pedidos personalizados con al menos 48 horas de anticipación para asegurar
+            disponibilidad y calidad.</p>
+        </div>
+      </div>
+
+      <div class="cuadro">
+        <button class="pregunta" aria-expanded="false">
+          <span class="texto">¿Ofrecen servicio de entrega a domicilio?</span>
+          <span class="flecha">▼</span>
+        </button>
+        <div class="respuesta">
+          <p>Sí. Realizamos entregas dentro de un radio de 10 km desde nuestra tienda, cubriendo zonas como San Miguel,
+            Magdalena, Pueblo Libre y alrededores. Las entregas se coordinan al momento de confirmar el pedido, y puedes
+            elegir entre franjas horarias disponibles. Las tarifas varían según la distancia y el tipo de producto.</p>
+        </div>
+      </div>
+
+      <div class="cuadro">
+        <button class="pregunta" aria-expanded="false">
+          <span class="texto">¿Qué métodos de pago aceptan?</span>
+          <span class="flecha">▼</span>
+        </button>
+        <div class="respuesta">
+          <p>Aceptamos pagos con tarjetas de crédito y débito (Visa, Mastercard, American Express), transferencias
+            bancarias, Yape, Plin y efectivo en tienda. Si realizas un pedido por WhatsApp o redes sociales, te
+            enviaremos los datos de pago correspondientes. Todos los pagos son seguros y confirmados antes de la
+            entrega.</p>
+        </div>
+      </div>
+
+      <div class="cuadro">
+        <button class="pregunta" aria-expanded="false">
+          <span class="texto">¿Con cuánta anticipación debo hacer un pedido?</span>
+          <span class="flecha">▼</span>
+        </button>
+        <div class="respuesta">
+          <p>Para pedidos estándar, puedes consultar disponibilidad el mismo día. Sin embargo, para productos
+            personalizados o en fechas especiales (como Día de la Madre, Navidad o cumpleaños), recomendamos hacer tu
+            pedido con al menos 48 a 72 horas de anticipación. Esto nos permite garantizar calidad, presentación y
+            puntualidad.</p>
+        </div>
+      </div>
+
+      <div class="cuadro">
+        <button class="pregunta" aria-expanded="false">
+          <span class="texto">¿Puedo recoger mi pedido en tienda?</span>
+          <span class="flecha">▼</span>
+        </button>
+        <div class="respuesta">
+          <p>Sí. Puedes recoger tu pedido directamente en nuestra tienda en el horario acordado. Te notificaremos cuando
+            esté listo para evitar esperas. Contamos con un espacio cómodo para atención rápida, y si lo deseas, puedes
+            revisar tu pedido antes de retirarlo para asegurarte de que todo esté perfecto.</p>
+        </div>
+      </div>
+
+      <div class="cuadro">
+        <button class="pregunta" aria-expanded="false">
+          <span class="texto">¿Qué pasa si necesito cancelar o reprogramar un pedido?</span>
+          <span class="flecha">▼</span>
+        </button>
+        <div class="respuesta">
+          <p>Entendemos que pueden surgir imprevistos. Si necesitas cancelar o reprogramar tu pedido, comunícate con
+            nosotros con al menos 24 horas de anticipación. En pedidos personalizados ya iniciados, aplicamos una
+            política de reembolso parcial según el avance. Siempre buscamos soluciones flexibles y justas para nuestros
+            clientes.</p>
+        </div>
+      </div>
     </section>
 
     <!-- Footer con información de contacto -->

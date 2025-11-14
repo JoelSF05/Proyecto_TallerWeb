@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre Nosotros | Flor de Vainilla</title>
   <link rel="stylesheet" href="estilos.css" />
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -15,11 +16,24 @@
     <header class="banner">
       <nav class="nav-left">
         <a href="inicio.html">Inicio</a>
+        <a href="carrito.html">Carrito de Compras</a>
       </nav>
+
       <div class="logo-centro">
         <img src="imágenes/logo.png" alt="Logo Flor de Vainilla" />
       </div>
+
       <nav class="nav-right">
+        <a href="sobre_nosotros.html">Sobre Nosotros</a>
+        <a href="preguntas.html">Preguntas Frecuentes</a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+      <!-- Menú móvil dentro del header -->
+      <nav class="menu-movil" aria-hidden="true">
+        <a href="inicio.html">Inicio</a>
+        <a href="carrito.html">Carrito de Compras</a>
         <a href="sobre_nosotros.html">Sobre Nosotros</a>
         <a href="preguntas.html">Preguntas Frecuentes</a>
       </nav>
@@ -33,20 +47,41 @@
 
     <!-- Contenido principal -->
     <section class="sobre_nosotros">
-      <div>
-        <p>En Flor de Vainilla, nos apasiona crear experiencias inolvidables a través de nuestros productos.
-          Cada bocado está hecho con amor y dedicación, utilizando solo los mejores ingredientes para
-          garantizar la más alta calidad.</p>
+      <div class="cuadro">
+        <h2>Nuestra Esencia</h2>
+        <p>
+          En <strong>Flor de Vainilla</strong>, no solo elaboramos postres: creamos experiencias que despiertan
+          emociones.
+          Cada creación nace del amor por la repostería artesanal y el deseo de compartir momentos memorables.
+        </p>
+      </div>
 
-        <p>Creemos que cada postre cuenta una historia, y por eso cuidamos cada detalle: desde la selección de
-          la vainilla más aromática
-          hasta la decoración final que roba sonrisas.</p>
+      <div class="cuadro">
+        <h2>Ingredientes con Historia</h2>
+        <p>
+          Seleccionamos cuidadosamente cada ingrediente, desde la vainilla más aromática hasta el toque final de
+          decoración,
+          para garantizar una calidad que se siente en cada bocado.
+        </p>
+      </div>
 
-        <p>En Flor de Vainilla no solo horneamos pasteles, horneamos emociones. Nuestro compromiso es ofrecerte
-          productos que conquisten la vista,
-          el olfato y el paladar, siempre con la calidez de un trato cercano y personalizado.</p>
+      <div class="cuadro">
+        <h2>Más que Pasteles</h2>
+        <p>
+          Nuestro compromiso va más allá del sabor: buscamos conquistar la vista, el olfato y el corazón.
+          Cada producto refleja nuestra dedicación y el cariño con el que atendemos a cada cliente.
+        </p>
+      </div>
+
+      <div class="cuadro">
+        <h2>Un Trato Cercano</h2>
+        <p>
+          Creemos en el poder de lo personal. Por eso, cada pedido es una oportunidad para conectar,
+          escuchar y entregar algo único, hecho a tu medida.
+        </p>
       </div>
     </section>
+
 
 
     <!-- Footer con información de contacto -->

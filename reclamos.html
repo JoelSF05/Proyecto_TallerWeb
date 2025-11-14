@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Libro de Reclamaciones | Flor de Vainilla</title>
   <link rel="stylesheet" href="estilos.css" />
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -15,11 +16,24 @@
     <header class="banner">
       <nav class="nav-left">
         <a href="inicio.html">Inicio</a>
+        <a href="carrito.html">Carrito de Compras</a>
       </nav>
+
       <div class="logo-centro">
         <img src="imágenes/logo.png" alt="Logo Flor de Vainilla" />
       </div>
+
       <nav class="nav-right">
+        <a href="sobre_nosotros.html">Sobre Nosotros</a>
+        <a href="preguntas.html">Preguntas Frecuentes</a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+      <!-- Menú móvil dentro del header -->
+      <nav class="menu-movil" aria-hidden="true">
+        <a href="inicio.html">Inicio</a>
+        <a href="carrito.html">Carrito de Compras</a>
         <a href="sobre_nosotros.html">Sobre Nosotros</a>
         <a href="preguntas.html">Preguntas Frecuentes</a>
       </nav>
