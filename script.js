@@ -1,7 +1,5 @@
-// ===============================
 // 1. Desplegables de preguntas frecuentes
-// ===============================
-function activarPreguntas() {
+document.addEventListener("DOMContentLoaded", () => {
   // Selecciona todos los botones de preguntas
   const botones = document.querySelectorAll(".pregunta");
 
@@ -22,13 +20,10 @@ function activarPreguntas() {
       }
     });
   });
-}
+});
 
-
-// ===============================
 // 2. Validación de formulario de reclamos
-// ===============================
-function validarFormularioReclamo() {
+document.addEventListener("DOMContentLoaded", () => {
   const formulario = document.getElementById("formulario-reclamo");
   if (!formulario) return; // Si no existe el formulario, no hace nada
 
@@ -48,16 +43,13 @@ function validarFormularioReclamo() {
     }
 
     // Simulación de envío exitoso
-    alert("¡Gracias por tu reclamo! Lo atenderemos a la brevedad.");
+    alert("¡Gracias por tu reclamo " + nombre + "! Lo atenderemos a la brevedad.");
     formulario.reset(); // Limpia el formulario
   });
-}
+});
 
-
-// ===============================
 // 3. Animaciones (para cuadros de Sobre Nosotros)
-// ===============================
-function animarCuadrosAlCargar() {
+document.addEventListener("DOMContentLoaded", () => {
   const cuadros = document.querySelectorAll(".cuadro");
 
   cuadros.forEach((cuadro, i) => {
@@ -72,12 +64,9 @@ function animarCuadrosAlCargar() {
       cuadro.style.transform = "scale(1)";
     }, 100);
   });
-}
+});
 
-
-// ===============================
 // 4. Menú móvil (hamburguesa)
-// ===============================
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const menuMovil = document.querySelector(".menu-movil");
@@ -91,9 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// ===============================
-// 5. Carrito de compras dinámico
-// ===============================
+// 5. Carrito de compras 
 document.addEventListener("DOMContentLoaded", () => {
   const botonesAgregar = document.querySelectorAll(".agregar"); // Botones de agregar
   const listaCarrito = document.getElementById("lista-carrito"); // UL donde se listan productos
@@ -146,19 +133,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (carrito.length === 0) {
       alert("Tu carrito está vacío.");
     } else {
-      alert("Gracias por tu compra 🎉. Total: S/ " + totalSpan.textContent);
+      alert("Gracias por tu compra!!. Total: S/ " + totalSpan.textContent);
       carrito = []; // Vacía el carrito
       renderCarrito(); // Limpia la vista
     }
   });
 });
 
-
-// ===============================
-// 6. Inicializar todo según la página
-// ===============================
-document.addEventListener("DOMContentLoaded", () => {
-  activarPreguntas();          // Activa FAQ
-  validarFormularioReclamo();  // Activa validación de formulario
-  animarCuadrosAlCargar();     // Activa animaciones de cuadros
-});
