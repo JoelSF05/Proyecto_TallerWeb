@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (carrito.length === 0) {
       alert("Tu carrito está vacío.");
     } else {
-      alert("Gracias por tu compra!!. Total: S/ " + totalSpan.textContent);
+      alert("Gracias por tu compra!! Total: S/ " + totalSpan.textContent);
       carrito = []; // Vacía el carrito
       renderCarrito(); // Limpia la vista
     }
