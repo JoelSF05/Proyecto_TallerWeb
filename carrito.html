@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Carrito de Compras - Flor de Vainilla</title>
+    <title>Catálogo - Flor de Vainilla</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="estilos.css">
     <script src="script.js" defer></script>
@@ -15,7 +15,7 @@
         <header class="banner">
             <nav class="nav-left">
                 <a href="inicio.html">Inicio</a>
-                <a href="carrito.html">Carrito de Compras</a>
+                <a href="carrito.html">Catálogo</a>
             </nav>
 
             <div class="logo-centro">
@@ -32,91 +32,103 @@
             <!-- Menú móvil dentro del header -->
             <nav class="menu-movil" aria-hidden="true">
                 <a href="inicio.html">Inicio</a>
-                <a href="carrito.html">Carrito de Compras</a>
+                <a href="carrito.html">Catálogo</a>
                 <a href="sobre_nosotros.html">Sobre Nosotros</a>
                 <a href="preguntas.html">Preguntas Frecuentes</a>
             </nav>
         </header>
 
         <main class="carrito">
-            <h1>Carrito de Compras</h1>
-            <div class="productos-lista">
-                <!-- Productos -->
-                <div class="productoCarrito" data-nombre="Pastel de Chocolate" data-precio="45">
-                    <img src="imágenes/pastel_chocolate.jpg" alt="Pastel de Chocolate">
-                    <h2>Pastel de Chocolate</h2>
-                    <p>Precio: S/ 55</p>
-                    <button class="agregar">Agregar al carrito</button>
-                </div>
+            <h1>Catálogo</h1>
 
-                <div class="productoCarrito" data-nombre="Pastel de Vainilla" data-precio="8">
-                    <img src="imágenes/pastel_blanco.jpg" alt="Pastel de Vainilla">
-                    <h2>Pastel de Vainilla</h2>
-                    <p>Precio: S/ 45</p>
-                    <button class="agregar">Agregar al carrito</button>
-                </div>
+            <!-- Contenedor de dos columnas -->
+            <div class="carrito-contenido">
+                <div class="productos-lista">
+                    <!-- Productos -->
+                    <div class="productoCarrito" data-nombre="Pastel de Chocolate" data-precio="55">
+                        <img src="imágenes/pastel_chocolate.jpg" alt="Pastel de Chocolate">
+                        <h2>Pastel de Chocolate</h2>
+                        <p>Precio: S/ 55</p>
+                        <button class="agregar">Agregar al carrito</button>
+                    </div>
 
-                <div class="productoCarrito" data-nombre="Tarta de Fresa" data-precio="8">
-                    <img src="imágenes/pastel_fresa.jpg" alt="Tarta de Fresa">
-                    <h2>Tarta de Fresa</h2>
-                    <p>Precio: S/ 50</p>
-                    <button class="agregar">Agregar al carrito</button>
-                </div>
- 
-                <div class="productoCarrito" data-nombre="Cheesecake" data-precio="30">
-                    <img src="imágenes/cheesecake.jpg" alt="Cheesecake">
-                    <h2>Cheesecake</h2>
-                    <p>Precio: S/ 30.00</p>
-                    <button class="agregar">Agregar al carrito</button>
-                </div>
+                    <div class="productoCarrito" data-nombre="Pastel de Vainilla" data-precio="45">
+                        <img src="imágenes/pastel_blanco.jpg" alt="Pastel de Vainilla">
+                        <h2>Pastel de Vainilla</h2>
+                        <p>Precio: S/ 45</p>
+                        <button class="agregar">Agregar al carrito</button>
+                    </div>
 
-                <div class="productoCarrito" data-nombre="Brownie" data-precio="12">
-                    <img src="imágenes/brownie.jpg" alt="Brownie">
-                    <h2>Brownie</h2>
-                    <p>Precio: S/ 12.00</p>
-                    <button class="agregar">Agregar al carrito</button>
-                </div>
+                    <div class="productoCarrito" data-nombre="Tarta de Fresa" data-precio="50">
+                        <img src="imágenes/pastel_fresa.jpg" alt="Tarta de Fresa">
+                        <h2>Tarta de Fresa</h2>
+                        <p>Precio: S/ 50</p>
+                        <button class="agregar">Agregar al carrito</button>
+                    </div>
 
-                <div class="productoCarrito" data-nombre="Macarons" data-precio="20">
-                    <img src="imágenes/Macarons.jpg" alt="Macarons">
-                    <h2>Macarons</h2>
-                    <p>Precio: S/ 20.00</p>
-                    <button class="agregar">Agregar al carrito</button>
-                </div>
+                    <div class="productoCarrito" data-nombre="Cheesecake" data-precio="30">
+                        <img src="imágenes/cheesecake.jpg" alt="Cheesecake">
+                        <h2>Cheesecake</h2>
+                        <p>Precio: S/ 30</p>
+                        <button class="agregar">Agregar al carrito</button>
+                    </div>
 
-                <div class="productoCarrito" data-nombre="Pie de Limón" data-precio="28">
-                    <img src="imágenes/torta de limon.jpg" alt="Pie de Limón">
-                    <h2>Pie de Limón</h2>
-                    <p>Precio: S/ 28.00</p>
-                    <button class="agregar">Agregar al carrito</button>
-                </div>
+                    <div class="productoCarrito" data-nombre="Brownie" data-precio="12">
+                        <img src="imágenes/brownie.jpg" alt="Brownie">
+                        <h2>Brownie</h2>
+                        <p>Precio: S/ 12</p>
+                        <button class="agregar">Agregar al carrito</button>
+                    </div>
 
-                <!-- Nuevos productos -->
-                <div class="productoCarrito" data-nombre="Cupcakes" data-precio="15">
-                    <img src="imágenes/cupcakes.jpg" alt="Cupcakes">
-                    <h2>Cupcakes</h2>
-                    <p>Precio: S/ 15.00</p>
-                    <button class="agregar">Agregar al carrito</button>
-                </div>
+                    <div class="productoCarrito" data-nombre="Macarons" data-precio="20">
+                        <img src="imágenes/Macarons.jpg" alt="Macarons">
+                        <h2>Macarons</h2>
+                        <p>Precio: S/ 20</p>
+                        <button class="agregar">Agregar al carrito</button>
+                    </div>
 
-                <div class="productoCarrito" data-nombre="Galletas Decoradas" data-precio="10">
-                    <img src="imágenes/galletas_decoradas.jpg" alt="Galletas Decoradas">
-                    <h2>Galletas Decoradas</h2>
-                    <p>Precio: S/ 10.00</p>
-                    <button class="agregar">Agregar al carrito</button>
+                    <div class="productoCarrito" data-nombre="Pie de Limón" data-precio="28">
+                        <img src="imágenes/torta de limon.jpg" alt="Pie de Limón">
+                        <h2>Pie de Limón</h2>
+                        <p>Precio: S/ 28</p>
+                        <button class="agregar">Agregar al carrito</button>
+                    </div>
+
+                    <!-- Nuevos productos -->
+                    <div class="productoCarrito" data-nombre="Cupcakes" data-precio="15">
+                        <img src="imágenes/cupcakes.jpg" alt="Cupcakes">
+                        <h2>Cupcakes</h2>
+                        <p>Precio: S/ 15</p>
+                        <button class="agregar">Agregar al carrito</button>
+                    </div>
+
+                    <div class="productoCarrito" data-nombre="Galletas Decoradas" data-precio="10">
+                        <img src="imágenes/galletas_decoradas.jpg" alt="Galletas Decoradas">
+                        <h2>Galletas Decoradas</h2>
+                        <p>Precio: S/ 10</p>
+                        <button class="agregar">Agregar al carrito</button>
+                    </div>
+
+                    <div class="productoCarrito" data-nombre="Tiramisú" data-precio="15">
+                        <img src="imágenes/tiramisu.jpg" alt="Tiramisú">
+                        <h2>Tiramisú</h2>
+                        <p>Precio: S/ 15</p>
+                        <button class="agregar">Agregar al carrito</button>
+                    </div>
+                </div>
+            
+
+                <!-- Carrito -->
+                <div class="carrito-items">
+                    <h2>Productos en tu carrito</h2>
+                    <ul id="lista-carrito"></ul>
+                    <div class="carrito-total">
+                        <h3>Total: S/ <span id="total">0</span></h3>
+                        <button id="checkout">Finalizar Compra</button>
+                    </div>
                 </div>
             </div>
-
-
-            <!-- Carrito -->
-            <div class="carrito-items">
-                <h2>Productos en tu carrito</h2>
-                <ul id="lista-carrito"></ul>
-                <div class="carrito-total">
-                    <h3>Total: S/ <span id="total">0</span></h3>
-                    <button id="checkout">Finalizar Compra</button>
-                </div>
-            </div>
+            <button id="toggle-carrito" class="boton-carrito-flotante" aria-expanded="false">🛒</button>
         </main>
 
         <!-- Footer con información de contacto -->
