@@ -163,7 +163,7 @@ body {
   color: #8c5a5a;
 }
 
-/* Carrusel dentro de portada */ 
+/* Carrusel dentro de portada */
 .carrusel {
   position: relative;
   width: 100%;
@@ -202,7 +202,7 @@ body {
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease, transform 0.2s ease;
   z-index: 2;
 }
@@ -804,17 +804,31 @@ body {
   transform: scale(1.03);
 }
 
-/*  Footer */
+/* ===== Footer general ===== */
 footer {
   background-color: #a86c6c;
   color: #fff;
+  padding: 40px 20px;
   text-align: center;
-  padding: 30px 20px;
 }
 
-footer img {
-  height: 50px;
-  margin-bottom: 15px;
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Información centrada */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 60px;
+  margin-bottom: 10px;
 }
 
 footer p {
@@ -823,13 +837,15 @@ footer p {
   line-height: 1.6;
 }
 
-footer a {
-  color: #fff;
-  text-decoration: none;
+.footer-libro {
+  width: 280px;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
 }
 
-footer a:hover {
-  text-decoration: underline;
+.footer-libro:hover {
+  transform: scale(1.05);
 }
 
 /* Responsive */
@@ -878,12 +894,27 @@ footer a:hover {
 
   .sobre-nosotros {
     padding: 40px 20px;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
 /* Móviles grandes (max-width: 768px) */
 @media (max-width: 768px) {
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-info {
+    margin: 0;
+  }
+
+  .footer-libro-contenedor {
+    justify-content: center;
+    margin-top: 20px;
+  }
 
   .boton-carrito-flotante {
     display: block;
@@ -1098,45 +1129,3 @@ footer a:hover {
     padding: 20px 10px;
   }
 }
-/* Imagen del Libro de Reclamaciones en el footer */
-.footer-libro-reclamaciones {
-  width: 180px;      
-  height: auto;      
-  display: block;
-  margin-top: 20px;
-  margin-left: auto; 
-  cursor: pointer;
-}
-
-/* Alineación dentro del footer */
-footer {
-  position: relative;
-}
-
-footer .libro-derecha {
-  position: absolute;
-  right: 25px;   
-  bottom: 25px;  
-}
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  text-align: center;
-  position: relative;
-}
-
-/* 📌 Libro de reclamaciones: a la derecha y grande */
-.footer-libro {
-  width: 180px;      /* tamaño grande */
-  position: absolute;
-  right: 20px;       /* se va a la derecha */
-  bottom: 20px;      /* ajusta altura */
-  transition: transform 0.3s ease;
-}
-
-.footer-libro:hover {
-  transform: scale(1.1);
-}
-
