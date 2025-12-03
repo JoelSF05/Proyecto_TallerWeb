@@ -1098,3 +1098,45 @@ footer a:hover {
     padding: 20px 10px;
   }
 }
+/* Imagen del Libro de Reclamaciones en el footer */
+.footer-libro-reclamaciones {
+  width: 180px;      
+  height: auto;      
+  display: block;
+  margin-top: 20px;
+  margin-left: auto; 
+  cursor: pointer;
+}
+
+/* Alineación dentro del footer */
+footer {
+  position: relative;
+}
+
+footer .libro-derecha {
+  position: absolute;
+  right: 25px;   
+  bottom: 25px;  
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  position: relative;
+}
+
+/* 📌 Libro de reclamaciones: a la derecha y grande */
+.footer-libro {
+  width: 180px;      /* tamaño grande */
+  position: absolute;
+  right: 20px;       /* se va a la derecha */
+  bottom: 20px;      /* ajusta altura */
+  transition: transform 0.3s ease;
+}
+
+.footer-libro:hover {
+  transform: scale(1.1);
+}
+
